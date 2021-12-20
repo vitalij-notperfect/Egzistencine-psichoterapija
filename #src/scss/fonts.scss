@@ -1,24 +1,21 @@
 @font-face {
     font-family: 'Ailerons';
-    src: url('../fonts/ailerons-typeface.woff2') format('woff2'),
-        url('../fonts/ailerons-typeface.woff') format('woff');
+    src: url("../fonts/ailerons-typeface.eot");
+    src: url('../fonts/ailerons-typeface.eot?#iefix') format('embedded-opentype');
+    src: url("../fonts/ailerons-typeface.woff") format("woff"),
+        url("../fonts/ailerons-typeface.woff2") format("woff2"),
+        url("../fonts/ailerons-typeface.otf") format("opentype");
     font-style: normal;
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'Futura';
-    src: url('../fonts/futura-sctot-light.woff2') format('woff2'),
-        url('../fonts/futura-sctot-light.woff') format('woff');
+    src: url("../fonts/futura-sctot-light.eot");
+    src: url('../fonts/futura-sctot-light.eot?#iefix') format('embedded-opentype');
+    src: url("../fonts/futura-sctot-light.woff") format("woff"),
+        url("../fonts/futura-sctot-light.woff2") format("woff2"),
+        url("../fonts/futura-sctot-light.otf") format("opentype");
     font-style: normal;
     font-weight: 300;
 }
-
-// @font-face {
-//     font-family: 'icomoon';
-//     src: url('../fonts/icomoon/icomoon.woff2?m7euv') format('woff2'),
-//          url('../fonts/icomoon/icomoon.woff?m7euv') format('woff');
-//     font-weight: normal;
-//     font-style: normal;
-//     font-display: block;
-// }
