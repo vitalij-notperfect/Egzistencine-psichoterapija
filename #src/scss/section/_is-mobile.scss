@@ -1,0 +1,10 @@
+.is_mobile {
+    .circle-with-cube {
+        span {
+            visibility: visible;
+            opacity: 1;
+            transform: translate(-40%,-25%);
+            @media ( max-width: 1024px ) { transform: translate(-36%,-40%); }
+        }
+    }
+}

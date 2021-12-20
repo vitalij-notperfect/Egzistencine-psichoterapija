@@ -1,0 +1,15 @@
+* {
+    cursor: none!important;
+}
+
+#circularcursor {
+    background-color: $color-purple; 
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 10000;
+    display: block;
+    pointer-events: none;
+    transform:translate(-50%, -50%)
+}

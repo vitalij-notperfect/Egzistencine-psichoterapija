@@ -1,0 +1,176 @@
+.title-section {
+
+    &.pb50 {
+        padding-bottom: 50px;
+        @media ( max-width: 1024px ) { padding-bottom: 30px; }
+    }
+
+    &.pb90 {
+        padding-bottom: 90px;
+        @media ( max-width: 1440px ) { padding-bottom: 50px; }
+        @media ( max-width: 1024px ) { padding-bottom: 30px; }
+    }
+
+    &.pb157 {
+        padding-bottom: 157px;
+        @media ( max-width: 1440px ) { padding-bottom: 140px; }
+        @media ( max-width: 1024px ) { padding-bottom: 100px; }
+        @media ( max-width: 768px ) { padding-bottom: 80px; }
+    }
+
+    &.with-circle {
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 37px;
+            height: 37px;
+            background-color: $color-purple;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            @media ( max-width: 1024px ) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &.with-square {
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 47px;
+            height: 47px;
+            background-color: $color-green;
+            display: block;
+            position: absolute;
+            left: -125px;
+            top: -10%;
+
+            @media ( max-width: 1300px ) {
+                width: 37px;
+                height: 37px;
+                left: -83px;
+            }
+
+            @media ( max-width: 1024px ) {
+                width: 20px;
+                height: 20px;
+                left: -40px;
+            }
+            @media ( max-width: 768px ) { left: 0px; }
+        }
+    }
+
+    &.with-circle-with-cube {
+        .h1 {
+            position: relative;
+            z-index: 15;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 61px;
+                height: 61px;
+                border: 2px solid $color-purple;
+                border-radius: 50%;
+                pointer-events: none;
+                transition: all 0.3s ease;
+                position: absolute;
+                left: 0;
+                transform: translate(-87%, 95%);
+                z-index: -15;
+        
+                @media ( max-width: 1024px ) {
+                    width: 40px;
+                    height: 40px;
+                }
+        
+                @media ( max-width: 470px ) {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        
+            &::after {
+                content: "";
+                display: block;
+                width: 47px;
+                height: 47px;
+                background-color: $color-gray;
+                pointer-events: none;
+                transition: all 0.3s ease;
+                opacity: 0.9;
+                position: absolute;
+                left: 0;
+                transform: translate(-57%, 80%);
+                z-index: -10;
+        
+                @media ( max-width: 1024px ) {
+                    width: 30px;
+                    height: 30px;
+                }
+        
+                @media ( max-width: 470px ) {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+
+    &.animated {
+        &.with-circle { 
+            &::after {
+                animation: circleAnimation infinite 4s linear;
+            }
+        }
+
+        &.with-square { 
+            &::after {
+                animation: squareAnimation infinite 2s linear;
+            }
+        }
+
+        &.with-circle-with-cube {
+            .h1 {
+                &::after {
+                    animation: cubeAnimation infinite 2s linear;
+                }
+            }
+        }
+    }
+
+    &.full-width {
+        &::after {
+            left: 50%;
+            transform: translateX(-50%);
+            @media ( max-width: 1024px ) { left: 40.5%; }
+            @media ( max-width: 768px ) {
+                left: 0%;
+                transform: translateX(0%);
+            }
+        }
+    }
+}
+
+@keyframes circleAnimation {
+    0% { background-color: $color-purple; }
+    50% { background-color: $color-green; }
+    100% { background-color: $color-purple; }
+}
+
+@keyframes squareAnimation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes cubeAnimation {
+    0% { transform: translate(-57%, 80%) rotate(0deg); }
+    100% { transform: translate(-57%, 80%) rotate(360deg); }
+}

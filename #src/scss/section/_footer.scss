@@ -1,0 +1,26 @@
+.footer {
+    &-widget {
+        margin-bottom: 100px;
+        @media ( max-width: 1024px ) { margin-bottom: 60px; }
+
+        p, a {
+            margin-bottom: 7px;
+            display: block;
+        }
+    }
+
+    &-bottom {
+        margin-bottom: 72px;
+        @media ( max-width: 1024px ) { margin-bottom: 60px; }
+        @media ( max-width: 768px ) { margin-bottom: 40px; }
+    }
+    &-social {
+        &-list {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 20px;
+            @media ( max-width: 1440px ) { gap: 10px; }
+        }
+    }
+}

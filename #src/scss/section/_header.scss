@@ -1,0 +1,22 @@
+.header {
+    padding: 202px 174px 197px 114px;
+
+    @media ( max-width: 1440px ) { padding: 100px 85px 70px 50px; }
+    @media ( max-width: 1024px ) { padding: 50px 55px 40px 30px; }
+    @media ( max-width: 475px ) { padding: 30px 35px 20px 15px; }
+    @media ( max-width: 320px ) { padding: 30px 20px 20px 15px; }
+    
+    &-logo {
+        img {
+            transition: all 0.3s ease;
+
+            @media ( max-width: 768px ) {
+                width: 180px;
+            } 
+
+            @media ( max-width: 470px ) {
+                width: 160px;
+            }
+        }
+    }
+}
